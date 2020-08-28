@@ -1,0 +1,140 @@
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -cuv 2 -constructionHistory 1;
+move -r 0 9.7 0;
+//TopSpehere
+
+polySphere -radius 2 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -cuv 2 -constructionHistory 1;
+move -r 0 7 0 ;
+//Middle Sphere
+
+polySphere -radius 3 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -cuv 2 -constructionHistory 1;
+move -r 0 3 0 ;
+//Bottom sphere
+
+
+polyCylinder -radius .5 -height 6 -subdivisionsX 20 -subdivisionsY 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -constructionHistory 1; //hat tall
+move -r 0 10.900626 0 ;
+
+polyCylinder -r 2 -h .5 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1; //Base of hat
+move -r 0 10.376038 0 ;
+
+
+polySphere -radius 1 -subdivisionsX 10 -subdivisionsY 10 -axis 0 1 0 -cuv 2 -constructionHistory 1; //right eye
+scale -r 0.255513 0.255513 0.255513 ;
+scale -r 0.12718 1 1 ;
+scale -r 1 2.223777 1 ;
+scale -r 1 1 1.618705 ;
+move -r 0 9.837458 0 ;
+move -r 0.867646 0 0 ;
+move -r -1.952624 0 0 ;
+scale -r 0.427278 0.427278 0.427278 ;
+move -r 0.064422 0 0 ;
+scale -r 2.774935 1 1 ;
+move -r 0 0 -0.477347 ;
+
+
+polySphere -radius 1 -subdivisionsX 10 -subdivisionsY 10 -axis 0 1 0 -cuv 2 -constructionHistory 1; //left eye
+scale -r 0.255513 0.255513 0.255513 ;
+scale -r 0.12718 1 1 ;
+scale -r 1 2.223777 1 ;
+scale -r 1 1 1.618705 ;
+move -r 0 9.837458 0 ;
+move -r 0.867646 0 0 ;
+move -r -1.952624 0 0 ;
+scale -r 0.427278 0.427278 0.427278 ;
+move -r 0.064422 0 0 ;
+scale -r 2.774935 1 1 ;
+move -r 0 0 -0.477347 ;
+move -r 0 0 0.706344 ;
+
+
+polySphere -radius 1 -subdivisionsX 10 -subdivisionsY 10 -axis 0 1 0 -cuv 2 -constructionHistory 1; //Coal 01
+scale -r 0.255513 0.255513 0.255513 ;
+scale -r 0.12718 1 1 ;
+scale -r 1 2.223777 1 ;
+scale -r 1 1 1.618705 ;
+move -r 0 9.837458 0 ;
+move -r 0.867646 0 0 ;
+move -r -1.952624 0 0 ;
+scale -r 0.427278 0.427278 0.427278 ;
+move -r 0.064422 0 0 ;
+scale -r 2.774935 1 1 ;
+move -r 0 0 -0.477347 ;
+move -r 0 0 0.706344 ;
+scale -r 1 0.724982 1 ;
+move -r 0 -0.470054 0 ;
+move -r 0.0262957 0 0 ;
+rotate -r -os -fo 0 0 19.393936 ;
+move -r 0.0299176 0 0 ;
+scale -r 0.552882 0.552882 0.552882 ;
+move -r -ls -wd 0.026097 0.0137577 0 ;
+
+polySphere -r 1 -subdivisionsX 10 -subdivisionsY 10 -axis 0 1 0 -cuv 2 -constructionHistory 1; //Coal 02
+scale -r 0.255513 0.255513 0.255513 ;
+scale -r 0.12718 1 1 ;
+scale -r 1 2.223777 1 ;
+scale -r 1 1 1.618705 ;
+move -r 0 9.837458 0 ;
+move -r 0.867646 0 0 ;
+move -r -1.952624 0 0 ;
+scale -r 0.427278 0.427278 0.427278 ;
+move -r 0.064422 0 0 ;
+scale -r 2.774935 1 1 ;
+move -r 0 0 -0.477347 ;
+move -r 0 0 0.706344 ;
+scale -r 1 0.724982 1 ;
+move -r 0 -0.470054 0 ;
+move -r 0.0262957 0 0 ;
+rotate -r -os -fo 0 0 19.393936 ;
+move -r 0.0299176 0 0 ;
+scale -r 0.552882 0.552882 0.552882 ;
+move -r -ls -wd 0.026097 0.0137577 0 ;
+select -r pSphere6 ;
+move -r 0 0 -0.245394 ;
+
+
+polySphere -r 1 -subdivisionsX 10 -subdivisionsY 10 -axis 0 1 0 -cuv 2 -constructionHistory 1; //Coal 03
+scale -r 0.255513 0.255513 0.255513 ;
+scale -r 0.12718 1 1 ;
+scale -r 1 2.223777 1 ;
+scale -r 1 1 1.618705 ;
+move -r 0 9.837458 0 ;
+move -r 0.867646 0 0 ;
+move -r -1.952624 0 0 ;
+scale -r 0.427278 0.427278 0.427278 ;
+move -r 0.064422 0 0 ;
+scale -r 2.774935 1 1 ;
+move -r 0 0 -0.477347 ;
+move -r 0 0 0.706344 ;
+scale -r 1 0.724982 1 ;
+move -r 0 -0.470054 0 ;
+move -r 0.0262957 0 0 ;
+rotate -r -os -fo 0 0 19.393936 ;
+move -r 0.0299176 0 0 ;
+scale -r 0.552882 0.552882 0.552882 ;
+move -r -ls -wd 0.026097 0.0137577 0 ;
+move -r 0 0 -0.258822 ;
+move -r 0 0 -0.263542 ;
+
+
+
+
+polyCone -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -sz 0 -axis 0 1 0 -rcp 0 -cuv 3 -constructionHistory 1; //carrot
+move -r 0 10.259743 0 ;
+rotate -r -os -fo 0 0 101.515726 ;
+rotate -r -os -fo 0 0 -33.991147 ;
+move -r -2.46913 0 0 ;
+scale -r 0.251745 0.251745 0.251745 ;
+scale -r 1 4.140622 1 ;
+rotate -r -os -fo 0 0 27.149235 ;
+move -r 0 -0.88513 0 ;
+move -r 0.60453 0 0 ;
+move -r 0 0.265575 0 ;
+move -r 0 0 -0.152888 ;
+
+scale -r 0.717141 0.717141 0.717141 ;
+setAttr "polyCone1.subdivisionsHeight" 8;
+nonLinear -type bend  -lowBound -1 -highBound 1 -curvature 0;
+setAttr "bend1.curvature" -12.98968;
+setAttr "bend1.lowBound" 0;
+setAttr "bend1.highBound" 1.649485;
+setAttr "bend1.curvature" -59.381393;
