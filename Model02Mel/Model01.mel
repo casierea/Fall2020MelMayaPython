@@ -1,0 +1,32 @@
+{
+string $colorArray[] = {"red", "green"};
+print $colorArray;
+}
+
+
+
+{
+    
+    string $sels[];
+    $sels = `ls -selection`; //data you want to utilize
+    print $sels;
+
+}
+
+{
+    
+    
+    string $ball[];
+   $ball =  `polySphere`;
+   print  "Declared state:";
+   print $ball;
+   
+   $ball[0] = `rename $ball[0] "beach_Ball_Geo"`; //does not change value within our variable. only chnage name of actuakl oobj
+   
+   print "Renamed state:";
+     print $ball;
+    //xform -ws -translation 0 7 2 $ball[0]; //store into variable. This is good practice
+   
+}
+
+
