@@ -29,4 +29,66 @@ print $colorArray;
    
 }
 
+//Sept6. Class of SEpt 3.
+
+
+{
+string allObjs[];    
+string tempObj[]; //just a place to store name of objs when create them
+
+tempobj[] = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`; //returns ["object name", "node name"]
+// only accept string value in an arry
+
+
+tempobj[] = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1`;
+
+
+
+
+}
+
+{
+    string $myArray[] = {"red", "orange", "yellow", "green","pink"};
+      
+   
+    $myAray[size($myArray)] = "cyan";
+    $myArray[size($myArray)] = "purple";
+    print $myArray;
+    
+}
+    
+    
+    
+    
+    
+}
+
+ //IF STATMENTS
+ 
+ group -empty -name "Geometry"; //will create a group called Geometry
+ 
+ 
+ 
+ if (objExists("Geometry")); //if you add a !objExist means doesnt exist.
+ {
+ print "Exists!";
+ }
+ else
+ {
+ print "Does not Exist";
+
+ }
+ 
+ //Do like this
+ 
+ 
+ if (!objExists ("Geometry"00
+ {
+ group -empty -name "Geometry";
+ }
+
+
+
+
+
 
