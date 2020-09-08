@@ -1,0 +1,35 @@
+
+{
+string $carObjs[] = {};
+string $tempCarObjs[] = {};
+
+$tempCarobjs = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+
+$tempCarObjs[0] = `rename $tempCarObjs[0] "carBody"`;
+
+
+
+}
+
+    //Works:
+	{
+    string $allObjsPractice[] = {};
+    string $tempObjs[] = {};
+    
+    $tempObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+     $allObjsPractice[0] = $tempObjs[0];
+}
+
+  string $ball[];
+   $ball =  `polySphere`;
+   print  "Declared state:";
+   print $ball;
+    $ball[0] = `rename $ball[0] "beach_Ball_Geo"`;
+   
+     //xform -ws -translation 0 8 2 $ball[0];
+     
+     string $body[];
+     $body = `polyCube`;
+     print "Declared Cube State";
+     print $body;
+     $body[0] = `rename $body[0] "car_beach_body";
