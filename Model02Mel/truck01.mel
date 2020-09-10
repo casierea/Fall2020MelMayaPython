@@ -61,7 +61,7 @@ scale -r 1 1 0.208193 ;
 move -r -6.733699 0 0 ;
 move -r 0 0 4.0907 ;
 }
-
+{
 //wheel02
 
  string $Wheel02[];
@@ -76,8 +76,8 @@ scale -r 1 1 0.208193 ;
 move -r -6.733699 0 0 ;
 move -r 0 0 4.0907 ;
 move -r 0 0 -8.351188 ;
-
-
+}
+{
 //Wheel3
 
  string $Wheel03[];
@@ -93,8 +93,8 @@ move -r -6.733699 0 0 ;
 move -r 0 0 4.0907 ;
 move -r 0 0 -8.351188 ;
 move -r 9.203909 0 0 ;
-
-
+}
+{
 //Wheel04
  string $Wheel04[];
    $Wheel04 =  `polySphere`;
@@ -109,3 +109,68 @@ move -r -6.733699 0 0 ;
 move -r 0 0 4.0907 ;
 move -r 8.963145 0 0 ;
 move -r 0.215827 0 0 ;
+}
+
+
+
+{
+//HeadlightR
+
+ string $headLight01[];
+   $headLight01 =  `polyCylinder`;
+   print  "Declared state:";
+   print $headLight01;
+    $headLight01[0] = `rename $headLight01[0] "HeadLight_R"`;
+        move -r -10.421177 0 0 ;
+    move -r -10.421177 0 0 ;
+select -r HeadLight_R ;
+
+rotate -r -os -fo 0 0 90.224126 ;
+move -r 0 0 3.602422 ;
+move -r 0 1.396052 1.010551 ;
+move -r 0.804469 0 0 ;
+move -r 11.495815 0 0 ;
+move -r 0 -1.870899 0 ;
+move -r 0 0 -1.437598 ;
+move -r -1.136786 0 0 ;
+move -r 0.580265 0 0 ;
+    }
+{	
+	//HeadLightL
+	
+	
+	 string $headLight02[];
+   $headLight02 =  `polyCylinder`;
+   print  "Declared state:";
+   print $headLight02;
+    $headLight02[0] = `rename $headLight02[0] "HeadLight_L"`;
+    
+        move -r -10.421177 0 0 ;
+    move -r -10.421177 0 0 ;
+select -r HeadLight_L ;
+
+rotate -r -os -fo 0 0 90.224126 ;
+move -r 0 0 3.602422 ;
+move -r 0 1.396052 1.010551 ;
+move -r 0.804469 0 0 ;
+move -r 11.495815 0 0 ;
+move -r 0 -1.870899 0 ;
+move -r 0 0 -1.437598 ;
+move -r -1.136786 0 0 ;
+move -r 0.580265 0 0 ;
+ move -r 0 0 -6.769643 ;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+    
+    }

@@ -1,0 +1,57 @@
+
+ 
+ $veggies[0] = "Broccolli";
+ $veggies[1] = "Carrot";
+ $veggies[2] = "spinach";
+print $veggies;
+
+
+{
+    string $veggieArray[] = {"broccollo","green"};
+    
+    print (size($veggieArray));
+}
+ 
+
+string $AllObjects[]
+ $AllObjects = ["Sphere", "Cube", "Cone"];
+ polyUnite $AllBojects[];
+ 
+ 
+ 
+ 
+  
+ 
+ $veggies[0] = "Broccolli";
+ $veggies[1] = "Carrot";
+ $veggies[2] = "spinach";
+print $veggies;
+
+
+{//practice
+    string $veggieArray[] = {"broccollo","green", "brusselSprout"};
+    
+    //print (size($veggieArray));
+    //$veggieArray[3] = "derp";
+    //print $veggieArray;
+    $veggieArray[size($veggieArray)] = "cyan";
+    
+    
+$veggieArray[size($veggieArray)] = "carrot";
+$veggieArray[size($veggieArray)] = "sprouts";
+    print $veggieArray;
+}
+ 
+
+string $AllObjects[]
+ $AllObjects = ["Sphere", "Cube", "Cone"];
+ polyUnite $AllBojects[];
+ 
+ 
+ //Array that works- Video Sept3. at 47 mins in
+ string $everyObj[] = {};
+string $temporObj[] = {};
+
+$temporObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+$everyObj[size($everyObj)] = $temporObj[0];
+print $everyObj;
