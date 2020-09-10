@@ -1,0 +1,50 @@
+
+
+
+
+string $everyObj[] = {}; //empty array out bc of {}. Declare= []. instantiate={}. 
+string $temporObj[] = {};
+
+$temporObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+$everyObj[size($everyObj)] = $temporObj[0];
+$temporObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+$everyObj[size($everyObj)] = $temporObj[0];
+$temporObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+$everyObj[size($everyObj)] = $temporObj[0];
+$temporObj = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
+$everyObj[size($everyObj)] = $temporObj[0];
+print $everyObj;
+
+
+polyUnite $everyObj;
+
+
+//EXAMPLE
+//string $everyObj[] ={}
+//string $tempObj[] = {};
+//$everyObj[0] = "red";
+
+
+
+
+
+
+//create and rename successfull
+string $AllArray[] = {};
+string $ThrowAwayObj[] = {};
+   $ThrowAwayObj =  `polyCube`;
+   print  "Declared state:";
+   print $ThrowAwayObj;
+    $ThrowAwayObj[0] = `rename $ThrowAwayObj[0] "jeff"`;
+    $AllArray[size($AllArray)] = $ThrowAwayObj[0];
+    
+    
+    
+ 
+   $ThrowAwayObj =  `polyCube`;
+   print  "Declared state:";
+   print $ThrowAwayObj;
+    $ThrowAwayObj[0] = `rename $ThrowAwayObj[0] "jim"`;
+    $AllArray[size($AllArray)] = $ThrowAwayObj[0];
+    
+     polyUnite $AllArray;
