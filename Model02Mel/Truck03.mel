@@ -1,0 +1,170 @@
+ 
+	string $AllArray[] = {};
+    string $ThrowAwayObj[] = {};
+   $ThrowAwayObj =  `polyCube`;
+ 
+    $ThrowAwayObj[0] = `rename $ThrowAwayObj[0] "Truck_Body"`;
+    $AllArray[size($AllArray)] = $ThrowAwayObj[0];
+	
+	setAttr "polyCube1.subdivisionsWidth" 6;
+	setAttr "polyCube1.subdivisionsHeight" 4;
+	setAttr "polyCube1.subdivisionsDepth" 2;
+
+
+scale -r 3.796692 3.796692 3.796692 ;
+scale -r 5.010814 1 1 ;
+
+scale -r 1 1 2.81669 ;
+select -r Truck_Body.f[31] ;
+select -tgl Truck_Body.f[32] ;
+select -tgl Truck_Body.f[26] ;
+select -tgl Truck_Body.f[25] ;
+hilite Truck_Body.f[25:26] Truck_Body.f[31:32] ;
+selectMode -component ;
+select -r Truck_Body.f[25:26] Truck_Body.f[31:32] ;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx -3.170752432 -pvy 1.898346 -pvz 0 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 Truck_Body.f[25:26] Truck_Body.f[31:32];
+// Result: polyExtrudeFace1 // 
+
+
+
+//Cab
+
+    string $cab[] ={}; // initialize cab array
+   $cab =  `polyCube`; //create polycube obj. assign polycub obj to variable cab.
+   print "Declared State:";
+    $cab[0] = `rename $cab[0] "cab_Truck"`;
+    $AllArray[size($AllArray)] = $cab[0];
+    
+    
+    move -r 0 5.470741 0 ;
+setAttr "polyCube2.subdivisionsWidth" 4;
+setAttr "polyCube2.subdivisionsHeight" 4;
+setAttr "polyCube2.subdivisionsDepth" 4;
+scale -r 10.581181 10.581181 10.581181 ;
+scale -r 10.581181 10.581181 10.581181 ;
+scale -r 1 0.33016 1 ;
+scale -r 0.569289 1 1 ;
+move -r 0 -2.026897 0 ;
+move -r -2.915913 0 0 ;
+scale -r 0.0945767 0.0945767 0.0945767 ;
+
+
+
+//wheel01
+
+ string $Wheel01[] ={};
+   $Wheel01 =  `polySphere`;
+   print  "Declared state:";
+  
+    $Wheel01[0] = `rename $Wheel01[0] "Wheel_A"`;
+	 $AllArray[size($AllArray)] = $Wheel01[0];
+	 
+	 
+move -r 0 -2.599215 0 ;
+scale -r 2.365652 2.365652 2.365652 ;
+scale -r 1 1 0.208193 ;
+move -r -6.733699 0 0 ;
+move -r 0 0 4.0907 ;
+
+
+//wheel02
+
+ string $Wheel02[] = {};
+   $Wheel02 =  `polySphere`;
+   print  "Declared state:";
+    $Wheel02[0] = `rename $Wheel02[0] "Wheel_B"`;
+ $AllArray[size($AllArray)] = $Wheel02[0];
+ 
+ 
+move -r 0 -2.599215 0 ;
+scale -r 2.365652 2.365652 2.365652 ;
+scale -r 1 1 0.208193 ;
+move -r -6.733699 0 0 ;
+move -r 0 0 4.0907 ;
+move -r 0 0 -8.351188 ;
+
+
+//Wheel3
+
+ string $Wheel03[] = {};
+   $Wheel03 =  `polySphere`;
+    print "Declared State:";
+    $Wheel03[0] = `rename $Wheel03[0] "Wheel_C"`;
+ $AllArray[size($AllArray)] = $Wheel03[0];
+ 
+ 
+move -r 0 -2.599215 0 ;
+scale -r 2.365652 2.365652 2.365652 ;
+scale -r 1 1 0.208193 ;
+move -r -6.733699 0 0 ;
+move -r 0 0 4.0907 ;
+move -r 0 0 -8.351188 ;
+move -r 9.203909 0 0 ;
+
+
+//Wheel04
+ string $Wheel04[] = {};
+   $Wheel04 =  `polySphere`;
+    print "Declared State:";
+    $Wheel04[0] = `rename $Wheel04[0] "Wheel_D"`;
+	$AllArray[size($AllArray)] = $Wheel04[0];
+	
+	
+move -r 0 -2.599215 0 ;
+scale -r 2.365652 2.365652 2.365652 ;
+scale -r 1 1 0.208193 ;
+move -r -6.733699 0 0 ;
+move -r 0 0 4.0907 ;
+move -r 8.963145 0 0 ;
+move -r 0.215827 0 0 ;
+
+
+//HeadlightR
+
+ string $headLight01[] = {};
+   $headLight01 =  `polyCylinder`;
+   print  "Declared state:";
+   print $headLight01;
+    $headLight01[0] = `rename $headLight01[0] "HeadLight_R"`;
+    $AllArray[size($AllArray)] = $headLight01[0];
+   
+   
+    move -r -10.421177 0 0 ;
+    move -r -10.421177 0 0 ;
+select -r HeadLight_R ;
+
+rotate -r -os -fo 0 0 90.224126 ;
+move -r 0 0 3.602422 ;
+move -r 0 1.396052 1.010551 ;
+move -r 0.804469 0 0 ;
+move -r 11.495815 0 0 ;
+move -r 0 -1.870899 0 ;
+move -r 0 0 -1.437598 ;
+move -r -1.136786 0 0 ;
+move -r 0.580265 0 0 ;
+    
+  
+    
+    //HeadlightL
+ string $headLight02[] = {};
+   $headLight02 =  `polyCylinder`;
+   print "Declared State:";
+    $headLight02[0] = `rename $headLight02[0] "HeadLight_L"`;
+    $AllArray[size($AllArray)] = $headLight02[0];
+    
+        move -r -10.421177 0 0 ;
+    move -r -10.421177 0 0 ;
+select -r HeadLight_L ;
+
+rotate -r -os -fo 0 0 90.224126 ;
+move -r 0 0 3.602422 ;
+move -r 0 1.396052 1.010551 ;
+move -r 0.804469 0 0 ;
+move -r 11.495815 0 0 ;
+move -r 0 -1.870899 0 ;
+move -r 0 0 -1.437598 ;
+move -r -1.136786 0 0 ;
+move -r 0.580265 0 0 ;
+ move -r 0 0 -6.769643 ;
+ 
+ polyUnite $AllArray;
