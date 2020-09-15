@@ -1,0 +1,104 @@
+proc SayHello()
+{
+print ("Hello");
+}
+SayHello():
+
+
+
+
+
+proc SayHello()
+{
+print ("Hello World\n You are beautiful booooopo"); //Have to redefine by updating the function. Load into memory 
+float $num1 = 5.3;
+float $num2 = 3.6;
+print ($num1 + $num2);
+print ("That's what you get when you add" + $num1 + "and" $num2 "!!!"); //string catanation
+
+}
+
+SayHello();
+
+
+
+
+proc SayHello()
+{
+print ("Hello World\n You are beautiful booooopo"); //Have to redefine by updating the function. Load into memory 
+float $num1 = 5.3;
+float $num2 = 3.6;
+print ($num1 + $num2);
+//print ("That's what you get when you add" + $num1 + "and" $num2 "!!!"); //string catanation Mine doesnt work.
+print ("Derp Mel Please Work" + $num1 + "AND" + $num2 ); //this works
+
+}
+
+SayHello();
+
+
+
+// when you \\ tab and backslash
+// \means something. Tab. 
+
+
+
+
+
+
+//error erroe error error
+global string $guy = "Dude"; //like public variable
+
+
+proc SayGoodbye (string $person)
+{
+    global string $guy;
+    print ("Goodbye" + $person)
+    
+}
+proc SayHelloToSomeone(string $person)
+{
+    print ($person);
+}
+
+SayHelloToSomeone("Johnny"); //$person = "Johnny"
+SayGoodbye ("Rachel");
+//grrrrrrrrrr
+
+
+
+
+ls -sl //list of objects in scene. /just prints. 
+//but want a return of the value,
+
+//`ls =sl` //I want to use the data. back ticks. 
+
+
+//string $sels[] = `ls -sl`;
+
+
+
+
+
+
+proc float AddTheNumbers (float $num1, float $num2)
+
+{
+float $sum;
+$sum = $num1 + $num2;
+return $sum;
+}
+
+print (AddTheNumbers 2,2) + AddTheNumbers (3,3)); //no wrok
+print (4 + 6);
+
+
+
+
+
+
+
+
+
+
+

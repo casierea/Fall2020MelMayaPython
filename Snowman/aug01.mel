@@ -1,0 +1,15 @@
+{ string $seld[];
+$sels = 'ls -selection';
+print $sels;
+}
+
+{
+string $ball[];
+//print = 'polySphere';
+$ball = 'polySphere';
+print( "Declared State: " + $ball);
+
+$ball[0] = 'rename $$ball[0] "Beach_Ball_Geo"'; //rename ball to something else 
+//xform -ws -translation 0 6 7 $ball[0];
+print "Renamed State: " + $ball;
+}

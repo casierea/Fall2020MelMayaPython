@@ -87,7 +87,7 @@ tempobj[] = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -
  group -empty -name "Geometry";
  }
 
-
+// this will skip and not create another group.
 
 
 

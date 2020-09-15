@@ -11,9 +11,35 @@
   $tempObj[] = `polyCube -w 1 -h 1 -d 1 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1`;
 
 }
+$ball[0] = `rename $ball[0] "beach_Ball_Geo"`; 
 
 
 
+
+{
+    
+    string $allObjs[] = {};
+    string $tempObj[] = {};
+    //$tempObj = `polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1`;
+    $tempObj = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1`;
+    
+    $earL[0] = `rename $earL[0] "left-bunny-ear"`;
+    
+    
+    select -r left-bunny-ear.f[15] ;
+select -tgl left-bunny-ear.f[14] ;
+select -tgl left-bunny-ear.f[12] ;
+select -tgl left-bunny-ear.f[13] ;
+    polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx -4.989144227 -pvy 0 -pvz 0.9045085907 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 left-bunny-ear.f[12:15];
+    move -r 0 0 2.284248 ;
+    
+    print $tempObj;
+  
+  
+  
+}
+    
+ 
 
 
 //works

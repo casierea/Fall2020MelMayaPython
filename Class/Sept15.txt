@@ -1,0 +1,4 @@
+proc SayHello()
+{
+print ("Hello");
+}
