@@ -34,3 +34,51 @@ else
 {
     print( $theName + "? who are you");
 }
+
+
+proc float AddValues()
+{
+    float $num1 = 3.5;
+    float $num2 = 6.5;
+    float $sum = $num1 +$num2;
+    return $sum;
+}
+
+AddValues();
+
+
+proc float SubtractValues()
+{
+    float $num1 = 3.5;
+    float $num2 = 6.5;
+    float $sum = $num1 - $num2;
+    return $sum;
+}
+
+SubtractValues();
+
+
+
+
+proc float DivideValues()
+{
+    float $num1 = 3.5;
+    float $num2 = 6.5;
+    float $sum = $num1 / $num2;
+    return $sum;
+}
+
+DivideValues();
+
+
+proc float MultiplyValues()
+{
+    float $num1 = 8;
+    float $num2 = 2;
+    float $sum = $num1 * $num2;
+    return $sum;
+}
+
+MultiplyValues();
+
+
