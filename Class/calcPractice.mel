@@ -1,0 +1,85 @@
+proc float AddValues( float $num1, float $num2)
+{
+float $number1;
+float $number2;
+float $sum = $number1 +$number2;
+return $sum;
+}
+AddValues(3.5, 2.5);
+
+
+proc float MeanValue(float $number1, flaot $number2, float $number3)
+{
+	float $Sum = $number1 + $number2 + $number3;
+	return $Sum;
+	
+}
+MeanValue( 10, 7, 9);
+
+
+proc Average (float $values[])
+{
+    //add all of numbers in the array.
+    //divide by the number of values in the array
+    // fin dby using length 
+    // -len()
+    //return the value
+    
+    
+}
+Average([34,22,34,45,74]);
+
+
+
+proc MeanValue (float $values[])
+{
+    
+}
+
+
+
+//Practice ^^^^^^^^^
+
+
+
+
+
+
+proc float AddValues( float $number1, float $number2) // Function definition of AddValues. Data type = float. Variable name = $nunmber1
+    {
+        float $sum = $number1 +$number2;
+        return $sum;
+    }
+    
+    
+AddValues(3.5, 2.5);
+
+
+proc float SubtractValues(float $number1, float $number2)
+{
+  
+    float $sum = $number1 - $number2;
+    return $sum;
+}
+
+SubtractValues(10.5, 4.5);
+
+
+
+proc float DivideValues( float $number1, float $number2)
+{
+    float $sum = $number1 / $number2;
+    return $sum;
+}    
+DivideValues( 12, 4);
+
+
+proc float MultiplyValues (float $number1, float $number2)
+{
+    float $sum = $number1 * $number2;
+    return $sum;
+}
+
+MultiplyValues (2, 4);
+
+
