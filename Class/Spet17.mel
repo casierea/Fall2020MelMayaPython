@@ -1,0 +1,67 @@
+
+proc Addnames (string $names[])
+{
+    print $names;
+}
+Addnames({"Joe", "Tom", "Steve"});
+
+
+int $numbers = {1,2,3,4,5};
+//mel multiple values in an array, have to use {}
+
+
+
+    `float pow(float base, float exponent)` //returns a base number raised to an exponent
+//use for loops. Dont use the pow command on the mel library
+
+    pow 2 4;
+    
+//use for loops. Dont use the pow command on the mel library
+
+
+int $num = 5;
+
+print ($num + "\n"); //print this numer(5) First time we printed it.
+
+//$num =$num +6; //original value of 5 + 6. Reassigning that value to the variable $num.
+
+$num += 6; //same as line above
+
+print ($num + "\n"); //print this number 5+6
+
+
+
+
+int $num = 5;
+print ($num + "\n");
+$num++;
+print ($num + "\n");
+
+//
+
+
+int $num1 = 5;
+int $num2 = 5;
+
+print ("Num1: " + $num1 + "    Num2: " + $num2 + "\n");
+
+
+$num1++; //print $num1; pretty much the same
+++$num2; //these make different results
+
+print ("Num1: " + $num1 + "    Num2: " + $num2 + "\n");
+
+
+
+//for loops
+
+
+//ForLoops
+//i =  incriment. variable. 
+
+//for(int $i;//initilize 
+//for(int $i; $i < 10; //Condition
+
+for(int $i; $i < 10;
+
+
