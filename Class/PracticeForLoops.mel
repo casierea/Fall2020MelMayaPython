@@ -1,0 +1,128 @@
+int $num = 5;
+print ($num + "\n");
+
+//$num = $num + 6;
+
+$num *= 6;
+print ($num + "\n");
+
+
+for($i = 0; $i < 10; $i++) //
+{
+    //print ($i + "\n");
+     print (($i +1) + "\n");
+}
+
+
+for($i =0; $i<10; $i=$i+2) //skips every other number
+{
+    print (($i + 1) +"\n");
+}
+
+for($i = 0; $i < 10; $i = $i + 2) //every other number
+{
+    print ($i + "\n|");           // prints $i
+}
+
+//context for an array
+
+
+string $names[] = { " Pickachu", "Char", "Squirtle","Puff"};
+
+for($i = 0;$i < 5; $i++)    //initaliaze; condition; increment. 
+{
+    print ($names[$i] + "\n");
+}
+
+
+
+string $names[] = {"John", "Jessie","James","Joe"};
+
+for($i=0; $i<size($names); $i++)
+{
+    print ($names[$i] + "\n");
+}
+//Shorter way
+string $names[] = {"John", "Jessie","James","Joe"}; //specified array
+
+for ($j in $names)  //specified an array. This will look in array ^^
+{
+    print ($j + "\n"); //
+}
+
+
+
+//Longer way
+for($i=0; $i<size($names); $i++)
+{
+    string $j = $names[$i]; //asign value of specific index to j.
+    print ($j + "\n"); //print j
+}
+
+//****************************
+
+//WHILE LOOPS
+
+/*int $i = 0; //this is an infinate loop. $i is always < 10. 
+
+while ($i < 10)
+{
+    print ($i + "\n");
+}
+*/
+
+int $i =10;
+
+while ($i < 10); // do loop.  
+{
+    print ($i + "\n"); //i = 10. print i (10) add +1.
+    $i++;
+}
+do
+{
+    print ($i + "\n");
+    $i++;
+    
+}
+while ($1 < 5); // i is more than 10. Stop.
+
+
+//DO LOOP AND BREAK AND CONTINUE
+/*int $i =10;
+
+while ($i < 10);   
+{
+    print ($i + "\n"); //i = 10. print i (10) add +1.
+    $i++;
+    if ( $i ==5
+        {
+            break;  //Break out of loop.
+            continue; //OR can use a continue to continue on. 
+        }
+             
+}
+do                     // do loop.
+{
+    print ($i + "\n"); //i = 10. print i (10) add +1.
+    $i++;
+    
+}
+while ($1 < 5); // i is more than 10. Stop.
+*/
+
+proc float Add(float $numbers[]) //pretend [3,5,2]. it will run. 3+0=3. 3+5=8. 8+2=10.
+{
+    float $sum = 0; //defined the var sum outside of for loop. This value will continue to persist.
+    
+    for($i = 0; $i<size($numbers); $i++) //start at first index ($i = 0) Once for loop is gone, $i is done.
+    {
+        $sum += $numbers [$i]; //take 1st index($i). Add to new value ($sum).
+    }
+    return $sum; //will return 10.
+}
+
+Add({2,3,5});
+
+//assign var
+int $something = Add({2,3,5});
+print $something;
