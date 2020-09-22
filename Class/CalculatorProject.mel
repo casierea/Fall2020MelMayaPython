@@ -64,3 +64,54 @@ return $D;
     }
     
 Div({8.0,4.0)};
+
+
+
+
+
+
+proc int Add(int $nums[])   
+{
+    int $sum = 0;  
+    int $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            {
+                $sum += $nums [$i];    
+            }
+            
+             $average = $sum / size($nums);
+           
+            return $average;
+            
+        //return $sum;  
+}
+
+Add({5,6,4});
+
+
+
+proc int Add(int $nums[])   
+{
+    int $sum = 0;  
+    int $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            { 
+            print ($i + "i\n"); 
+            print ($sum + "sum\n");
+            print ($nums[$i] + "nums i\n");
+                $sum = $sum + $nums[$i];  
+                
+            print ($i + "\n");
+            print ($sum + "\n");
+                
+            }
+            
+             $average = $sum / size($nums);
+           print $average;
+            return $average;
+            
+        //return $sum;  
+}
+
+Add({5,6,4});
+

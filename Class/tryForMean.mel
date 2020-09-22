@@ -1,0 +1,124 @@
+
+//MEAN
+proc int Add(int $nums[])   
+{
+    int $sum = 0;  
+    int $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            { 
+            print ($i + "i\n"); 
+            print ($sum + "sum\n");
+            print ($nums[$i] + "nums i\n");
+                $sum = $sum + $nums[$i];  
+                
+            print ($i + "\n");
+            print ($sum + "\n");
+                
+            }
+            
+             $average = $sum / size($nums);
+           print $average;
+            return $average;
+            
+        //return $sum;  
+}
+
+Add({5,6,4});
+//works
+
+
+
+
+
+
+
+
+proc int Add(int $nums[])   
+{
+    int $sum = 0;         
+        for($i = 0; $i<size($nums); $i++)  
+            {
+                $sum += $nums [$i];    
+            }
+        return $sum;       
+}
+Add({2,3,5});    
+
+//find length of array
+//divide sum by length
+
+int $nums[]
+
+int $list[] = {1,2,3,2,2};
+int $count = intArrayCount(1, $list);
+
+
+int floatArrayCount(float $item, float[] $list); // return the #of times the float in $items occurs in the float array.
+
+int inArrayCount (int $nums, int[] $list);
+
+int floatArrayCount(float $item, float[] $list); // return the #of times the float in $items occurs in the float array.
+
+int inArrayCount (int $nums, int[] $list);
+
+
+
+
+int $count $nums[] = {1,2,3,4,5};
+
+int $count = int $nums[];
+
+//find length of array
+int intArrayCount ( int $nums[]);
+
+
+
+//divide sum by length
+
+int $nums[]
+
+int $list[] = {5,2,3,2,2,6,1};
+int $count = intArrayCount(1, $list);
+
+$count = intArrayCount (4, $list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+proc int Add(int $nums[])   
+{
+    int $sum = 0;  
+    int $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            {
+                $sum += $nums [$i];    
+            }
+            int $average = $sum / size($nums);
+            return $average;
+            
+        return $sum;  
+}
+
+int $Arrayhay[] = {2,3,5};
+
+Add($Arrayhay);    
+
+
+
+
+
+$count = intArrayCount (4, $list);
+
+ //print ($nums[$i]);
+   print (size($nums));
