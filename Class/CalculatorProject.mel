@@ -50,9 +50,9 @@ proc float Div(float $numbers[])
         float $D;
             for ($i =0; $i<size($numbers); $i++)
                 {
-                    if ($i = 0)
+                    if ($i = 0) //because of your if statement, the first round of your for loop hits the if statement as true since i=0
                         {
-                            $D =$numbers[$i} / $numbers [$i+1];
+                            $D =$numbers[$i] / $numbers [$i+1];
                             $i++;
                         }
                         else
@@ -63,12 +63,12 @@ proc float Div(float $numbers[])
 return $D;
     }
     
-Div({8.0,4.0)};
+Div({8.0,4.0});
 
 
 
 
-
+//average
 
 proc int Add(int $nums[])   
 {
@@ -89,7 +89,7 @@ proc int Add(int $nums[])
 Add({5,6,4});
 
 
-
+//average
 proc int Add(int $nums[])   
 {
     int $sum = 0;  
