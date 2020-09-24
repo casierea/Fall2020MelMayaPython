@@ -102,7 +102,7 @@ proc int Add(int $nums[])
 Add({5,6,4});
 
 
-
+//Mode
 
 proc float Mode(float $numbers[])
 {
@@ -124,11 +124,71 @@ proc float Mode(float $numbers[])
                  $frequency[$index] = $frequency[$index] + 1;
               }
       }
+     
+     int $Biggest; //biggest count
+     
+     for($i=0; $i<size($values); $i++)
+     {
+        if($frequency[$i] > $Biggest)
+        {
+            $Biggest = $frequency[$i];
+        } 
+     }
+     
+     
       //loop through frequency[] to find the largest value
       //Get the index of the count
       //get associated value from $values[]
       //return as the mode
       
-      return 1;
+      return $values[$Biggest];
 }
 
+Mode({4,5,67,8,9,9,5,6,8,9});
+
+
+//POW
+proc float Powpow(float $x, float $n)
+{
+    float $sum = $n;
+ 
+    for($i=0; $i<$x-1; $i++)
+    {
+        $sum = $sum * $n;
+    }
+    return $sum;
+}
+Powpow(2,3);
+
+
+
+
+proc float Powpow(float $x, float $n)
+{
+    float $sum = $n;
+    
+     if($x=0)
+     {
+        $sum =1;
+        
+         }
+         else
+         {
+     for($i=0; $i<$x-1; $i++)
+    {
+        $sum = $sum * $n;
+       print ("$n, $sum");
+    }
+    
+   
+     }
+  return $sum;
+}
+
+
+
+Powpow(0,4);
+Powpow(4,0);
+Powpow(4,2);
+
+//Median

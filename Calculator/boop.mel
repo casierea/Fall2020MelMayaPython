@@ -1,0 +1,57 @@
+proc float Mode(float $numbers[])
+{
+    float $values[];
+    float $frequency[];
+    
+    for($i=0; $i<size($numbers); $i++)
+    
+      {
+          if (!floatArrayContains($numbers[$i], $values)) //(value we are looking for from array list of numbers. item= $numbers. Check in $values to see if that number is there.
+              {
+                  $values[size($values)] = ($numbers[$i]);
+                  $frequency[size($values)] = 1;
+              }
+              else
+              {
+                  int $index;
+                  $index = floatArrayFind($numbers[$i], 0, $values);
+                 $frequency[$index] = $frequency[$index] + 1;
+              }
+      }
+     
+     int $Biggest; //biggest count
+     
+     for($i=0; $i<size($values); $i++)
+     {
+        if($frequency[$i] > $Biggest)
+        {
+            $Biggest = $frequency[$i];
+        } 
+     }
+     
+     
+      //loop through frequency[] to find the largest value
+      //Get the index of the count
+      //get associated value from $values[]
+      //return as the mode
+      
+      return $values[$Biggest];
+}
+
+Mode({4,5,67,8,9,9,5,6,8,9});
+
+
+
+
+proc float Powpow(float $x, float $n)
+{
+    float $sum;
+   $sum = $n;
+    
+    for($i =0; $i < $x-1; $i++;)
+    {
+        $sum = $sum * $n;
+    }
+    //return $sum;
+}
+Powpow({4,5});
