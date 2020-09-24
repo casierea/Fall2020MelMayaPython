@@ -1,0 +1,91 @@
+//source , and script name will import in. Maya- scripts folder
+
+global proc Calc(float $numbers[], string $operation)
+{
+	Add($numbers);
+	
+}
+
+Calc({35,7,2,65,2}, "add")	
+
+
+proc Add(float $input[])
+{
+//input = {35,7,2,65,2}
+//do math
+print (35 + 7 +2 + 65 +2)
+}
+
+global proc Sub()
+{
+
+}
+
+global proc Multi()
+{
+
+}
+
+
+
+
+//Calculator(array of numbers, operation type, )
+
+//-operations: +,*,-,/, power, mean, mode, median.
+
+//if operation type is "add"
+//-Call function addition (numbers[]).
+//else if operation is "mean"
+	//-call funation Mwean(numbers[])
+	
+	
+	
+	
+	
+	
+//?umbrella acamdemy?
+//crashed maya- operator not valid for ...
+proc Add(float $nums[])
+{
+	float $sum;
+	string $operation = "";
+	for ($n in $numbs)
+	{
+		$sum += $n;
+		
+		if($operation == "")
+		{
+			$operation = $n;
+		}
+		else
+		{
+		$operation = $operation + " + " + $n;
+		
+		}
+		//$sum == 21
+		//$operation == " 1+ 2 + 3 + 4 + 5 + 6"
+		$operation = $operation + " = " + $sum;
+		
+		print ($operation);
+	}
+	return $sum;	
+}
+
+
+Add({1,2,3,4,5,6});
+
+
+//need calc funaction to return sam efunction
+ //return Add($numbers);
+
+
+
+
+
+
+
+
+
+
+
+
