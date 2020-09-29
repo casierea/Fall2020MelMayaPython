@@ -43,6 +43,11 @@ Mode({4,5,67,8,9,9,5,6,8,9});
 
 
 
+
+
+
+
+
 proc float Powpow(float $x, float $n)
 {
     float $sum;
@@ -52,6 +57,30 @@ proc float Powpow(float $x, float $n)
     {
         $sum = $sum * $n;
     }
-    //return $sum;
+    return $sum;
 }
 Powpow({4,5});
+
+//redo with david
+
+proc float Powpowpow(float $x, float $n) //$x = exponent, $n is base
+{
+    float $total = $n;
+    //float $sum = $n + $x; 
+     if($x=0)
+     {
+        $total =1;
+         }
+     else
+         {
+     for($i=2; $i<$x; $i++)
+    {
+        $total = $total * $x;
+       print ("$x, $total");
+    }
+    
+   
+    }
+  return $total;
+}
+

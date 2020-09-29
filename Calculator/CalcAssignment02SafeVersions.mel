@@ -1,4 +1,3 @@
-
 //Multiplication
 
 proc int Multiply(int $nums[])
@@ -52,7 +51,7 @@ Add({2,3,5});     // Add these numbers. array.
 
 
 
-//Division //Breaks Maya still
+//Division
 proc float Div(float $numbers[])
     {
         float $D;
@@ -147,48 +146,28 @@ proc float Mode(float $numbers[])
 Mode({4,5,67,8,9,9,5,6,8,9});
 
 
-//POW
-proc float Powpow(float $x, float $n)
+
+
+
+
+ proc float Powpowpow(float $n, float $x) // $n is base,$x = exponent
 {
-    float $sum = $n;
- 
-    for($i=0; $i<$x-1; $i++)
+    float $total = $n;
+    //float $sum = $n + $x; 
+     //if($x=0)
+     //{
+        //$total =1;
+        // }
+    // else
+         //{
+     for($i = 2; $i <= $x; $i++)
     {
-        $sum = $sum * $n;
-    }
-    return $sum;
-}
-Powpow(2,3);
-
-
-
-
-proc float Powpow(float $x, float $n)
-{
-    //float $sum = $n;
-    float $sum = $n + $x; 
-     if($x=0)
-     {
-        $sum =1;
-        
-         }
-         else
-         {
-     for($i=0; $i<$x-1; $i++)
-    {
-        $sum = $sum * $n;
-       print ("$n, $sum");
+        $total = $total * $n; //total is total * base($n)
+       print ("$x, $total");
     }
     
-   
-     }
-  return $sum;
+  return $total;
 }
 
 
-
-Powpow(0,4);
-Powpow(4,0);
-Powpow(4,2);
-
-//Median
+Powpowpow($n = 3, $x = 2); 
