@@ -1,0 +1,93 @@
+global proc float Calculator(float $numbers[], string $operation)
+{
+	float $return; //total
+	
+		if($operation == "add")
+			{
+			print ("doing add");
+			$return = Addition($numbers);
+			
+			
+			}
+		else if($operation == "sub")
+			{
+			    print("doing subtraction");
+			//$return = Subtraction($numbers);
+			}
+		else if($operation == "mult")
+			{
+			     print("doing mulitiplication");
+			    //$return = Multiplication($numbers);
+			}
+		else if($operation == "divi")
+			{
+			     print("doing division");
+			    //$return = Division($numbers);
+			}
+		else if($operation == "power")
+			{
+			    print("doing power");
+			    //$return = Powerful($numbers);
+			}
+		else if($operation == "mode")
+			{
+			    print("doing mode");
+			    //$return = TheMode($numbers);
+			}
+		else if($operation == "mean")
+			{
+			    print ("doing mean");
+			    //$return = TheMean($numbers);
+			}
+			
+		else if($operation == "median")
+			{
+			    print("doing median");
+			    //$return = TheMedian($numbers);
+			}
+			
+		else if($operation == "topow")
+			{
+			    print("doing topow");
+			}
+			
+		return $return;
+}
+
+
+global proc float Addition(float $nums[])   //(procedure integer)(Add) (int string array)
+{
+    float $sum = 0;         // int string sum equals zero
+        //create string variable for print statemetn
+        string $printstatement = "\nThe result of ";
+        for($i = 0; $i<size($nums); $i++)  //initialize (float), condition variable string i is less than the size of the nums array. Increment with +1 to new nums 
+            {
+                $sum += $nums [$i];    // i is zero. add the array. new sum.
+                if( $i == 0)
+                {
+                    $printstatement = $printstatement  + $nums[$i];
+                }
+                else
+                {
+                       $printstatement = $printstatement  + " + " + $nums[$i];
+                }
+                
+            }
+        $printstatement = $printstatement + " " + "=" + " " + $sum; 
+        print ("\n" + $printstatement);
+               
+        return $sum;        //show the sum
+}
+
+
+	
+
+Calculator ({3, 5, 9}, "add");
+Calculator ({3, 5, 9}, "sub");
+Calculator ({3, 5, 9}, "mult");
+Calculator ({3, 5, 9}, "divi");
+
+Calculator ({3, 5, 9}, "mode");
+Calculator ({3, 5, 9}, "mean");
+Calculator ({3, 5, 9}, "median");	
+Calculator ({3, 5, 9}, "topow");
