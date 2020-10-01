@@ -1,0 +1,173 @@
+//Multiplication
+
+proc int Multiply(int $nums[])
+{
+    int $sum = 1;
+        for($i = 0; $i<size($nums); $i++)
+            {
+                $sum *= $nums [$i];
+            }
+        return $sum;        
+}
+Multiply({2,5});
+
+
+
+
+
+
+//Subtraction
+
+proc int Subtract(int $nums[])
+{
+    int $sum = 0;
+        for($i = 0; $i<size($nums); $i++)
+            {
+                $sum -= $nums [$i];
+            }
+        return $sum;        
+}
+Subtract({2,3,5,7,89,99,91,245});	
+
+
+
+
+
+
+//Addition
+proc int Add(int $nums[])   //(procedure integer)(Add) (int string array)
+{
+    int $sum = 0;         // int string sum equals zero
+        for($i = 0; $i<size($nums); $i++)  //initialize (float), condition variable string i is less than the size of the nums array. Increment with +1 to new nums 
+            {
+                $sum += $nums [$i];    // i is zero. add the array. new sum.
+            }
+        return $sum;        //show the sum
+}
+Add({2,3,5});     // Add these numbers. array.
+
+
+
+
+
+
+//Division
+proc float Div(float $numbers[])
+    {
+        float $D;
+            for ($i =0; $i<size($numbers); $i++)
+                {
+                    if ($i = 0)
+                        {
+                            $D =$numbers[$i] / $numbers [$i+1];
+                            $i++;
+                        }
+                        else
+                        {
+                            $D = $D / $numbers[$i];
+                        }
+                }
+return $D;
+    }
+
+Div({8.0,4.0});
+
+
+
+//MEAN
+proc int Add(int $nums[])   
+{
+    int $sum = 0;  
+    int $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            { 
+            print ($i + "i\n"); 
+            print ($sum + "sum\n");
+            print ($nums[$i] + "nums i\n");
+                $sum = $sum + $nums[$i];  
+                
+            print ($i + "\n");
+            print ($sum + "\n");
+                
+            }
+            
+             $average = $sum / size($nums);
+           print $average;
+            return $average;
+            
+        //return $sum;  
+}
+
+Add({5,6,4});
+
+
+//Mode
+
+proc float Mode(float $numbers[])
+{
+    float $values[];
+    float $frequency[];
+    
+    for($i=0; $i<size($numbers); $i++)
+    
+      {
+          if (!floatArrayContains($numbers[$i], $values)) //(value we are looking for from array list of numbers. item= $numbers. Check in $values to see if that number is there.
+              {
+                  $values[size($values)] = ($numbers[$i]);
+                  $frequency[size($values)] = 1;
+              }
+              else
+              {
+                  int $index;
+                  $index = floatArrayFind($numbers[$i], 0, $values);
+                 $frequency[$index] = $frequency[$index] + 1;
+              }
+      }
+     
+     int $Biggest; //biggest count
+     
+     for($i=0; $i<size($values); $i++)
+     {
+        if($frequency[$i] > $Biggest)
+        {
+            $Biggest = $frequency[$i];
+        } 
+     }
+     
+     
+      //loop through frequency[] to find the largest value
+      //Get the index of the count
+      //get associated value from $values[]
+      //return as the mode
+      
+      return $values[$Biggest];
+}
+
+Mode({4,5,67,8,9,9,5,6,8,9});
+
+
+
+
+
+
+ proc float Powpowpow(float $n, float $x) // $n is base,$x = exponent
+{
+    float $total = $n;
+    //float $sum = $n + $x; 
+     //if($x=0)
+     //{
+        //$total =1;
+        // }
+    // else
+         //{
+     for($i = 2; $i <= $x; $i++)
+    {
+        $total = $total * $n; //total is total * base($n)
+       print ("$x, $total");
+    }
+    
+  return $total;
+}
+
+
+Powpowpow($n = 3, $x = 2); 

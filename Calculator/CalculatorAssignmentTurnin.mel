@@ -21,13 +21,13 @@ global proc float Calculator(float $numbers[], string $operation)
 			}
 		else if($operation == "divi")
 			{
-			     print("doing division");
-			    //$return = Division($numbers);
+			    
+			    $return = Division($numbers);
 			}
 		else if($operation == "power")
 			{
 			    print("doing power");
-			    //$return = Powerful($numbers);
+			    $return = Topower($numbers);   //($numbers[0], $numbers[1]);
 			}
 		else if($operation == "mode")
 			{
@@ -36,25 +36,22 @@ global proc float Calculator(float $numbers[], string $operation)
 			}
 		else if($operation == "mean")
 			{
-			    print ("doing mean");
-			    //$return = TheMean($numbers);
+			    //print ("doing mean");
+			    $return = TheMean($numbers);
 			}
 			
 		else if($operation == "median")
 			{
-			    print("doing median");
-			    //$return = TheMedian($numbers);
+			   // print("doing median");
+			    $return = TheMedian($numbers);
 			}
 			
-		else if($operation == "topow")
-			{
-			    print("doing topow");
-			}
+		
 			
 		return $return;
 }
 
-
+//Addition
 global proc float Addition(float $nums[])   //(procedure integer)(Add) (int string array)
 {
     float $sum = 0;         // int string sum equals zero
@@ -80,6 +77,7 @@ global proc float Addition(float $nums[])   //(procedure integer)(Add) (int stri
         return $sum;        //show the sum
 }
 
+//Subtraction
 global proc float Subtraction(float $nums[])
 {
     int $total;
@@ -115,68 +113,142 @@ global proc float Subtraction(float $nums[])
         return $sum;        
 }
 
-	
-	
-	
-	
-	
-	global proc float Mode(float $numbers[])
+
+
+	global proc float Division(float $nums[])
 {
-    float $values[];
-    float $frequency[];
+    print(size($nums)+ "Count of numbers to divide");
     
-    for($i=0; $i<size($numbers); $i++)
+    float $quotient;
+    float $numer;
+    
+if( size($nums) < 2)
+   {
+	print ("not enough numbers to divide");
+	//$quotient = 1.0;
+	//return $nums[$i];
+   }
+    else
+        {
+	       for($i=0; $i < size($nums) - 1; $i++)
+	        {
+	
+        		if ($i == 0)
+        		    {
+        		       $quotient = $nums[$i];
+        		        
+        		    }
+		    
+    		    $numer = $quotient;    
+    		    $quotient = $quotient / $nums[$i + 1];
+		    }
+		
+		print ("dividing " + $numer + " by " + $nums[$i+1] + " to get " + $quotient);
+	}
+	
+return $quotient;
+}
+
+
+	
+	
+	
+	//The Mode
+	global proc float TheMode(float $nums[])
+{
+    string $printstatement = "\n Of the numbers ";
+      
+    float $values[]; //set of array numbers
+    float $frequency[]; //count of each value matched by index to the values array
+    
+    for($i=0; $i<size($nums); $i++)
     
       {
-          if (!floatArrayContains($numbers[$i], $values)) //(value we are looking for from array list of numbers. item= $numbers. Check in $values to see if that number is there.
+          if (!floatArrayContains($nums[$i], $values)) //(value we are looking for from array list of numbers. item= $numbers. Check in $values to see if that number is there.
               {
-                  $values[size($values)] = ($numbers[$i]);
+                  $values[size($values)] = ($nums[$i]);
                   $frequency[size($values)] = 1;
+                 
+                  
               }
               else
               {
                   int $index;
-                  $index = floatArrayFind($numbers[$i], 0, $values);
+                  $index = floatArrayFind($nums[$i], 0, $values);
                  $frequency[$index] = $frequency[$index] + 1;
               }
       }
      
-     int $Biggest; //biggest count
+     int $BiggestCount; //most frequent number
      
      for($i=0; $i<size($values); $i++)
-     {
-        if($frequency[$i] > $Biggest)
-        {
-            $Biggest = $frequency[$i];
-        } 
-     }
-     
-     
-      //loop through frequency[] to find the largest value
-      //Get the index of the count
-      //get associated value from $values[]
-      //return as the mode
-      
-      return $values[$Biggest];
+         {
+            if($frequency[$i] > $BiggestCount)
+            {
+                $BiggestCount = $frequency[$i];
+               
+            } 
+            
+            $printstatement = $printstatement + " " + $values[$i];
+            
+         }
+  print ($printstatement + " The mode is " + $values[$BiggestCount]);
+  
+      return $values[$BiggestCount];
 }
 
-Mode({4,5,67,8,9,9,5,6,8,9});
+//The Mean
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+//MEAN
+global proc float TheMean(float $nums[])   
+{
+    string $printstatement = "Of the numbers";
+    
+    float $sum = 0;  
+    float $average;       
+        for($i = 0; $i<size($nums); $i++)  
+            { 
+          
+                $sum = $sum + $nums[$i];  
+               
+                $printstatement = $printstatement + " " + $nums[$i] + ",";
+            }
+            
+            $average = $sum / size($nums);
+           print ($printstatement + " the  mean is " + $average);
+           print $average;
+            return $average; 
+}
+
+//Power
+ global proc float Topower (float $n, float $x) // $n is base,$x = exponent
+{
+     string $printstatement = "This number to the power of that number is";
+     
+    float $total = $n;
+  
+     for($i = 2; $i <= $x; $i++)
+    {
+        $total = $total * $n; //total is total * base($n)
+       print ("$x, $n");
+    }
+    
+  return $total;
+}
+
+//global proc float TheMedian(float $nums[])
+//{
+    
+//}
 
 //Calculator ({3, 5, 9}, "add");
 //Calculator ({10, 1, 4}, "sub");
-Calculator ({3, 5}, "mult");
-//Calculator ({3, 5, 9}, "divi");
+//Calculator ({3, 5}, "mult");
+Calculator ({3, 5, 9}, "divi");
 
-//Calculator ({3, 5, 9}, "mode");
+//Calculator ({4,5,67,8,9,9,5,6,8,9}, "mode");
 //Calculator ({3, 5, 9}, "mean");
 //Calculator ({3, 5, 9}, "median");	
-//Calculator ({3, 5, 9}, "topow");
+//Calculator ({$n = 3.0, $x =5.0}, "power");
+//Calculator ({3, 5}, "power");

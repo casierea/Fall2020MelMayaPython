@@ -1,0 +1,60 @@
+global proc float Division($nums[])
+{
+print(size($nums)+ "Count of numbers to divide");
+
+if( size($nums) < 2:
+	print ("not enough numbers to divide");
+	return $nums[];
+}
+else
+{
+	for($i=0; $i < size($nums) - 1; $i++)
+	{
+	
+		if ($1 == 0)
+		{
+		float $quotient = ($nums[$i];
+		}
+		float $numer = $quotient;
+		$quotient = $quotient / $nums[$i + 1];
+		
+		
+		print ("dividing " + $numer + " by " + $nums[$i+1] + " to get " + $quotient)
+	}
+return $quotient;
+}
+
+Division({50, 2});
+
+
+//try2
+
+global proc float Division($nums[])
+{
+print(size($nums)+ "Count of numbers to divide");
+    float $quotient;
+    
+if( size($nums) < 2:
+	print ("not enough numbers to divide");
+	return $nums[];
+   }
+    else
+        {
+	        for($i=0; $i < size($nums) - 1; $i++)
+	    {
+	
+		if ($1 == 0)
+		    {
+		        float $quotient = ($nums[$i];
+		    }
+		    
+		float $numer = $quotient;
+		$quotient = $quotient / $nums[$i + 1];
+		
+		
+		print ("dividing " + $numer + " by " + $nums[$i+1] + " to get " + $quotient)
+	}
+return $quotient;
+}
+
+Division({50, 2});
