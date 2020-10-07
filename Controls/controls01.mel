@@ -124,3 +124,59 @@ proc ColorChange(int $newColor, string $Ctrls[])
                    
     }
 }
+
+
+//woooorrrrrkkkk
+proc ColorChange(int $newColor, string $Ctrls[])
+{
+    //string $Ctrls[] = `ls -selection`;  //list transform nodes of selected objs
+    //string $ctrl_shapes[];
+    print(size($Ctrls) + " objects to change color for\n");
+    
+    for ($Ctrl in $Ctrls)
+    {
+        string $ctrl_shapes[] = `listRelatives -shapes $Ctrl`; //print shape name  
+        
+        print(size($ctrl_shapes) + " shapes in object data \n");
+        print($ctrl_shapes);
+        //setAttr $ctrl_shapes[0].overrideEnabled 1;
+        //setAttr $ctrl_shapes[0].overrideColor $newColor;
+        
+        for ($ctrl_shape in $ctrl_shapes)
+        {
+            print($ctrl_shape + " current set color element\n"); // Ctrl_0Shape1
+            setAttr $ctrl_shape.overrideEnabled 1;
+            setAttr $ctrl_shape.overrideColor $newColor;
+
+        
+            //setAttr $ctrl_shape.overrideEnabled 1; //1 = this is true. 0= false
+            //setAttr $ctrl_shape.overrideColor 1;
+            print("color changed to " + $newColor + "for object" + $ctrl_shape + "\n\n");
+        } 
+                   
+    }
+}
+
+string $colorObjs1[] = `ls -selection`;
+ColorChange(5, $colorObjs1);
+
+
+
+setAttr Ctrl_0Shape2.overrideEnabled 1;
+setAttr Ctrl_0Shape2.overrideColor 2;
+
+setAttr Ctrl_0Shape3.overrideEnabled 1;
+setAttr Ctrl_0Shape3.overrideColor 3;
+  
+  
+setAttr Ctrl_0Shape4.overrideEnabled 1;
+setAttr Ctrl_0Shape4.overrideColor 31;
+
+
+setAttr Ctrl_0Shape5.overrideEnabled 1;
+setAttr Ctrl_0Shape5.overrideColor 25;
+
+setAttr Ctrl_0Shape6.overrideEnabled 1;
+setAttr Ctrl_0Shape6.overrideColor 20;
+
+
