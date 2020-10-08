@@ -1,0 +1,53 @@
+xform -q -ws -translation "pSphere1"; //actual position on obj
+
+setAttr 
+getAttr "pSphere1.translate"; // gives whatever value is in this feild
+
+
+//joint in same position as helped obj- xform will give data to place obj in scene.
+
+
+//rand function 
+
+float $random = `rand -1 10`;
+print ("\nFloat: " + $random);
+$random= `trunc($random)`;
+print ("\nTrunc: + $random);
+
+
+hw- create function. 
+argyments
+1- number o fduplicates
+2- range of placement (X,Y,Z)  your grandplane is flat. y=0. or 0=2. z= -10, 10. x=
+3- duplicate selected obj an drandomly place in scene within that range. 
+
+
+Bread crumbs- node called closest point to surface
+
+HW dissection
+Need to have at bare minium these aruments
+what the function is supposed to do .
+
+
+Function Random Placement()
+-arguments:
+
+int $num of duplicates
+float $minX, $maxX
+		$minY, $maxY
+		$minZ, $MaxZ
+		
+	Variables string $sels = `ls -sl` //current selection
+	
+	
+	//duplicates
+	gor ($i=0; i< $numOfDuplciates;$i++)
+	duplicate currentobject //duplciate -rr
+	
+	
+	float $randX = rand $minX $maxXfloat
+	flaot $randY		"y  "y
+						"z  "z
+	float $randZ
+	
+	Move object to rand x,y,z position
