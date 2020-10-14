@@ -1,0 +1,17 @@
+string $Objs[] = `ls -selection`;  //list transform nodes of selected objs
+
+    for ($Obj in $Objs)
+        {
+            string $Obj_shapes[] = `listRelatives -shapes $Obj`; //print shape name
+            print $Obj_shapes;
+           
+        }
+
+
+duplicate -rr pSphereShape1; //duplicates pSphere1
+
+duplicate -rr `ls -selection`; //duplicates selection
+
+
+setAttr pSphereShape1.overrideEnabled 1;
+//setAttr pSphereShape1.overrideColor 5;
