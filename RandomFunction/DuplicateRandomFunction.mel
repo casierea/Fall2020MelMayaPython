@@ -1,32 +1,13 @@
-string $Objs[] = `ls -selection`;  //list transform nodes of selected objs
-
-    for ($Obj in $Objs)
-        {
-            string $Obj_shapes[] = `listRelatives -shapes $Obj`; //print shape name
-            print $Obj_shapes;
-           
-        }
-
-
-duplicate -rr pSphereShape1; //duplicates pSphere1
-
-duplicate -rr `ls -selection`; //duplicates selection
-
-
-setAttr pSphereShape1.overrideEnabled 1;
-//setAttr pSphereShape1.overrideColor 5;
-
-
 
 
 proc RandomObj(int $number, float $minX, float $maxX, float $minY, float $maxY, float $minZ, float $maxZ)
-
+{    
     string $Objs[] = {};  
-    string $Objs[] = `ls -sl`;  //list transform nodes of selected objs
+    $Objs = `ls -sl`;  //list transform nodes of selected objs
 
     for ($Obj in $Objs)
         {
-			 for($i=0; $i<$num; $i++) //go through array and pick object
+			 for($i=0; $i<$number; $i++) //go through array and pick object
             {
                
                 duplicate -rr; //duplicate the object
@@ -41,8 +22,8 @@ proc RandomObj(int $number, float $minX, float $maxX, float $minY, float $maxY, 
             //print $Obj_shapes;
            //duplicate -rr `ls -selection`; //duplicates selection
 		   
-		   
-        }
+		  } 
+}
 
 RandomObj (4, -6, 3, 10, 45, 32, -7);
 
@@ -51,16 +32,3 @@ RandomObj (4, -6, 3, 10, 45, 32, -7);
  
  //float $random = `rand 0 2`;
  //print ("\n Float: " + $random);
-
-
-
-
-
-
-//duplicate -rr pSphereShape1; //duplicates pSphere1
-
-
-//setAttr pSphereShape1.overrideEnabled 1;
-//setAttr pSphereShape1.overrideColor 5;
-
-
